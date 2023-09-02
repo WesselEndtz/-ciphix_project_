@@ -12,6 +12,7 @@ build/
 venv/
 develop-eggs/
 dist/
+.DS_Store
 downloads/
 eggs/
 .eggs/
