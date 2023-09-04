@@ -67,3 +67,5 @@ else:
     print(f'POST request failed with status code: {response.status_code}')
     print(response.text)
 ```
+
+This python script will use your text_to_analyse and send it to the API endpoint and return the sentiment of the text in response
