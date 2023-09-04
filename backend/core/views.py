@@ -12,7 +12,13 @@ class ContactAPIView(views.APIView):
             
             if serializer.is_valid():
                 message_details = serializer.validated_data
-                return Response(message_details)
+
+                # Add extra data to the response
+                extra_data = {
+                    'extra_key': 'extra_value',
+                }
+                response_data = {**message_details, **extra_data}
+                return Response(response_data)
             else:
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except JSONDecodeError:
