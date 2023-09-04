@@ -2,11 +2,11 @@ import requests
 import json
 
 # Define the URL of your API endpoint
-url = 'http://127.0.0.1:8000/contact/'
+url = 'http://127.0.0.1:8000/txt_sentiment/'
 
 # Define the data payload as a dictionary
 data = {
-    'message': 'test',
+    'message': 'pretty good amazing stuff wow amazed',
 }
 
 # Set the headers for the request
