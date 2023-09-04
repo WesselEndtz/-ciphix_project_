@@ -4,6 +4,7 @@ from core import views as core_views
 from rest_framework import routers
 
 
+
 router = routers.DefaultRouter()
 
 urlpatterns = router.urls
