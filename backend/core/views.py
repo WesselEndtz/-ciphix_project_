@@ -13,11 +13,11 @@ class ContactAPIView(views.APIView):
             
             if serializer.is_valid():
                 message_details = serializer.validated_data
-                message = str(message_details['message'])
-                sentiment = get_sentiment('I am not very happy, but I am also not especially sad')
+                message_extract = str(message_details['message'])
+                sentiment = get_sentiment(message_extract)
                 # Add extra data to the response
                 extra_data = {
-                    message: str(sentiment),
+                    'all_data': str(sentiment),
                 }
                 response_data = {**message_details, **extra_data}
                 return Response(response_data)

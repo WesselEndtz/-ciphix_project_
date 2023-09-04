@@ -6,7 +6,7 @@ url = 'http://127.0.0.1:8000/contact/'
 
 # Define the data payload as a dictionary
 data = {
-    'message': 'test',
+    'message': 'this product is good',
 }
 
 # Set the headers for the request
