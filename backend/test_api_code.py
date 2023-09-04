@@ -6,7 +6,7 @@ url = 'http://127.0.0.1:8000/txt_sentiment/'
 
 # Define the data payload as a dictionary
 data = {
-    'message': 'pretty good amazing stuff wow amazed',
+    'message': 'bad',
 }
 
 # Set the headers for the request

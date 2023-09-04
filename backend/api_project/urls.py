@@ -11,5 +11,5 @@ urlpatterns = router.urls
 
 urlpatterns += [
     path('admin/', admin.site.urls),
-    path('txt_sentiment/', core_views.ContactAPIView.as_view()),
+    path('txt_sentiment/', core_views.SentimentAPIView.as_view()),
 ]
