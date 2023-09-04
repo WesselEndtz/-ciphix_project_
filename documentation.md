@@ -4,27 +4,28 @@
 
 We assume you have git installed on your computer
 
-step 1 : clone git
-
-'clone git_url'
-
+#### step 1 : clone git
 ```bash
-#!/bin/bash
-echo "Hello, World!"
+clone git_url
 ```
 
-step 2 :
+#### step 2 : open git on terminal
+```bash
+cd git_name
+```
 
-
-step 1 : create a virtual env using
-
+#### step 3 : create a virtual env using
+```bash
 python -m venv env_name
+```
 (env_name = name, best practise name = "venv", since that is ignored in .gitignore)
 
-step 2 : activate the venv
-
+#### step 4 : activate the venv
+```bash
 source env_name/bin/activate
+```
 
-step 3 : install packages
-
+#### step 5 : install packages
+```bash
 pip install -r requirements.txt
+```
