@@ -8,6 +8,11 @@ step 1 : clone git
 
 'clone git_url'
 
+```bash
+#!/bin/bash
+echo "Hello, World!"
+```
+
 step 2 :
 
 
