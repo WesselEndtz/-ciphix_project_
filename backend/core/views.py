@@ -4,8 +4,11 @@ from rest_framework.response import Response
 from json import JSONDecodeError
 from .serializers import MessageSerializer
 from .utils.spacy_function import get_sentiment
+from django_ratelimit.decorators import ratelimit
+
 
 class SentimentAPIView(views.APIView):
+    @ratelimit(key='all', rate='3/hour', block=True)
     def post(self, request):
         try:
             data = JSONParser().parse(request)
