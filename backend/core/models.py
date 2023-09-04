@@ -6,6 +6,12 @@ from django_extensions.db.models import (
 	TitleDescriptionModel
 )
 
+class Message(models.Model):
+    message = models.TextField()  # Changed field name to "message"
+
+    def __str__(self):
+        return self.message
+
 class Contact(
 	TimeStampedModel, 
 	ActivatorModel,

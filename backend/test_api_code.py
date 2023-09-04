@@ -6,9 +6,7 @@ url = 'http://127.0.0.1:8000/contact/'
 
 # Define the data payload as a dictionary
 data = {
-    'name': 'Bobby Stearman',
     'message': 'test',
-    'email': 'bobby@didcoding.com'
 }
 
 # Set the headers for the request
@@ -29,3 +27,4 @@ if response.status_code == 200:
 else:
     print(f'POST request failed with status code: {response.status_code}')
     print(response.text)
+
