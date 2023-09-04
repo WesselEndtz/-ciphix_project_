@@ -5,7 +5,8 @@ from json import JSONDecodeError
 from .serializers import MessageSerializer
 from .utils.spacy_function import get_sentiment
 
-class ContactAPIView(views.APIView):
+
+class SentimentAPIView(views.APIView):
     def post(self, request):
         try:
             data = JSONParser().parse(request)
