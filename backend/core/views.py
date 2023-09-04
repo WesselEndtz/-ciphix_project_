@@ -3,6 +3,7 @@ from rest_framework import views
 from rest_framework.response import Response
 from json import JSONDecodeError
 from .serializers import MessageSerializer
+from .utils.spacy_function import get_sentiment
 
 class ContactAPIView(views.APIView):
     def post(self, request):
@@ -12,10 +13,11 @@ class ContactAPIView(views.APIView):
             
             if serializer.is_valid():
                 message_details = serializer.validated_data
-
+                message = str(message_details['message'])
+                sentiment = get_sentiment('I am not very happy, but I am also not especially sad')
                 # Add extra data to the response
                 extra_data = {
-                    'extra_key': 'extra_value',
+                    message: str(sentiment),
                 }
                 response_data = {**message_details, **extra_data}
                 return Response(response_data)
