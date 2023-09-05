@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the root directory of your Django project
-cd /ciphix_project_/backend
+cd backend
 python manage.py runserver
 
 """
