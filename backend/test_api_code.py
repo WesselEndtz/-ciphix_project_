@@ -17,7 +17,7 @@ headers = {
 # Convert the data payload to JSON format
 json_data = json.dumps(data)
 
-# Make a POST request using requests
+# Make a POST request using requestsdw
 response = requests.post(url, data=json_data, headers=headers)
 
 # Check the response status code and content
