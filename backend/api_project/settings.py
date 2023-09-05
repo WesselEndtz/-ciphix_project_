@@ -19,7 +19,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'dkj888'
 DEBUG = False
-ALLOWED_HOSTS = ['ciphixdjango.azurewebsites.net', '127.0.0.1']
+ALLOWED_HOSTS = ['ciphixdjango.azurewebsites.net', '127.0.0.1', os.environ['WEBSITE_HOSTNAME']]
 
 
 # Application definition
