@@ -17,10 +17,9 @@ load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = '38293'
+SECRET_KEY = 'dkj888'
 DEBUG = False
-ALLOWED_HOSTS = ['zealous-bush-56a466555bdf407f91ebbbfb7401977b.azurewebsites.net', 'yourcustomdomain.com']
-#os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = ['ciphixdjango.azurewebsites.net']
 
 
 # Application definition
