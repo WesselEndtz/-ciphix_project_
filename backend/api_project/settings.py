@@ -20,6 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'dkj888'
 DEBUG = False
 ALLOWED_HOSTS = ['ciphixdjango.azurewebsites.net', '127.0.0.1', os.environ['WEBSITE_HOSTNAME']]
+SECURE_HSTS_SECONDS = 31536000
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Enable HSTS for subdomains
+CSRF_COOKIE_SECURE = True  # Use a secure-only CSRF cookie
+SECURE_HSTS_PRELOAD = True  # Enable HSTS preload
+
 
 
 # Application definition
