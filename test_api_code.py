@@ -19,7 +19,7 @@ headers = {
 json_data = json.dumps(data)
 
 # Make a POST request using requestsdw
-response = requests.post(url2, data=json_data, headers=headers)
+response = requests.post(url, data=json_data, headers=headers)
 
 # Check the response status code and content
 if response.status_code == 200:
