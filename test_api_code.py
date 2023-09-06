@@ -2,11 +2,12 @@ import requests
 import json
 
 # Define the URL of your API endpoint
-url = 'http://127.0.0.1:8000/txt_sentiment/'
+url = 'https://ciphixprojectdemo.azurewebsites.net/txt_sentiment/'
+url2 = 'http://127.0.0.1:8000/txt_sentiment/'
 
 # Define the data payload as a dictionary
 data = {
-    'message': 'super positive stuff',
+    'message': 'super negative stuff',
 }
 
 # Set the headers for the request
@@ -18,7 +19,7 @@ headers = {
 json_data = json.dumps(data)
 
 # Make a POST request using requestsdw
-response = requests.post(url, data=json_data, headers=headers)
+response = requests.post(url2, data=json_data, headers=headers)
 
 # Check the response status code and content
 if response.status_code == 200:
