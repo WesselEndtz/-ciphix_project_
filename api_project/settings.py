@@ -17,15 +17,18 @@ load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = 'dkj888'
-DEBUG = False
-ALLOWED_HOSTS = ['ciphixdjango.azurewebsites.net', '127.0.0.1', os.environ['WEBSITE_HOSTNAME']]
-SECURE_HSTS_SECONDS = 31536000
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Enable HSTS for subdomains
-CSRF_COOKIE_SECURE = True  # Use a secure-only CSRF cookie
-SECURE_HSTS_PRELOAD = True  # Enable HSTS preload
+
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '+g=3l70v^508@gpg22o#d_@5kf5lj8&)_r&x#-u4mm&(p856ht'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ['*']
 
 
 

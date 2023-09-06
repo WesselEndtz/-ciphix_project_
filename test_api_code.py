@@ -2,7 +2,7 @@ import requests
 import json
 
 # Define the URL of your API endpoint
-url = 'http://ciphixdjango.azurewebsites.net/'
+url = 'http://127.0.0.1:8000/txt_sentiment/'
 
 # Define the data payload as a dictionary
 data = {

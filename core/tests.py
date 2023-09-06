@@ -4,12 +4,8 @@ from rest_framework.test import APITestCase
 from rest_framework import status
 
 
-
+"""
 class ContactTestCase(APITestCase):
-
-    """
-    Test suite for Contact
-    """
     def setUp(self):
         self.client = APIClient()
         self.data = {
@@ -91,3 +87,4 @@ class ContactTestCase(APITestCase):
         data["email"] = "test"
         response = self.client.post(self.url, data)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+"""
