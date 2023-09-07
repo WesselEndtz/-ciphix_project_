@@ -8,7 +8,6 @@ from rest_framework.parsers import JSONParser
 from rest_framework import views
 from rest_framework.response import Response
 from json import JSONDecodeError
-from .serializers import MessageSerializer
 from .utils.spacy_function import get_sentiment
 
 # Define a logger
@@ -39,5 +38,5 @@ class SentimentAPIView(APIView):
             return JsonResponse({"result": "error", "message": "JSON decoding error"}, status=400)
         except Exception as e:
             logger.error("An error occurred: %s", str(e))
-            return Response({"result": "error", "message": "Internal server error"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({"result": "error", "message": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
