@@ -8,7 +8,9 @@ from rest_framework.parsers import JSONParser
 from rest_framework import views
 from rest_framework.response import Response
 from json import JSONDecodeError
-from .utils.spacy_function import get_sentiment
+from .utils.get_sentiment import get_sentiment
+from .serializers import MessageSerializer
+import json
 
 # Define a logger
 logger = logging.getLogger(__name__)
@@ -19,16 +21,19 @@ class SentimentAPIView(APIView):
 
     def post(self, request):
         try:
+            #clean up data
             data = JSONParser().parse(request)
             serializer = MessageSerializer(data=data)
             
             if serializer.is_valid():
+                #extract message from data
                 message_details = serializer.validated_data
                 message = str(message_details['message'])
-                sentiment = get_sentiment('I am not very happy, but I am also not especially sad')
+                batch_process = isinstance(message_details['message'], list)
+                sentiment = get_sentiment(message, batch_process)
                 # Add extra data to the response
                 extra_data = {
-                    message: str(sentiment),
+                    'message': sentiment,
                 }
                 response_data = {**message_details, **extra_data}
                 return Response(response_data)
