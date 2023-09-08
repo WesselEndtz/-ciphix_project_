@@ -12,6 +12,13 @@ from .utils.get_sentiment import get_sentiment
 from .serializers import MessageSerializer
 import json
 
+"""
+Receives post requests and serializes data, test whether data is list / string
+and sends data to get_sentiment (where data gets analysed in batches or per string)
+retreives either a list (batch) or a string with the result
+neg=1.0 neu=0.0 pos=0.0 compound=-0.5423
+"""
+
 # Define a logger
 logger = logging.getLogger(__name__)
 

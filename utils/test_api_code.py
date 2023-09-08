@@ -11,7 +11,7 @@ be more efficient by taking the whole list in one api call and returning the
 results in list format where data[n] = result[n]
 """
 
-data = ['bad', 'bad', 'good, maybe', 'very bad', 'maybe good']
+data = ['bad', 'bad', 'good, maybe', 'bad', 'this is a great product']
 
 # Create a dictionary with a key-value pair where the key represents the data
 json_data = {"message": data}
@@ -24,7 +24,7 @@ headers = {
 }
 
 # Make a POST request using requests
-response = requests.post(url2, data=json_data, headers=headers)
+response = requests.post(url, data=json_data, headers=headers)
 
 # Check the response status code and content
 if response.status_code == 200:
