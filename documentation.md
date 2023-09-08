@@ -30,6 +30,11 @@ source env_name/bin/activate
 pip install -r requirements.txt
 ```
 
+#### step 6 (optional) : runserver
+```bash
+python manage.py runserver
+```
+
 ## Usage guide
 
 Python script
