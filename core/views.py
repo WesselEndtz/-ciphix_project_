@@ -37,10 +37,11 @@ class SentimentAPIView(APIView):
                 message_details = serializer.validated_data
                 message = str(message_details['message'])
                 batch_process = isinstance(message_details['message'], list)
-                sentiment = get_sentiment(message, batch_process)
+                data, sentiment = get_sentiment(message, batch_process)
                 # Add extra data to the response
                 extra_data = {
-                    'message': sentiment,
+                    'data_received' : data,
+                    'result': sentiment,
                 }
                 response_data = {**message_details, **extra_data}
                 return Response(response_data)

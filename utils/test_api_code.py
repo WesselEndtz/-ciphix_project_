@@ -12,6 +12,7 @@ results in list format where data[n] = result[n]
 """
 
 data = ['bad', 'bad', 'good, maybe', 'bad', 'this is a great product']
+data = 'maybe this is a bad review'
 
 # Create a dictionary with a key-value pair where the key represents the data
 json_data = {"message": data}
