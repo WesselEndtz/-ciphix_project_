@@ -16,9 +16,10 @@ class MessageSerializer(serializers.Serializer):
         """
         Deserialize the data and handle both string and list input.
         """
-        if isinstance(data.get("message"), list):
+        message = data.get("message")
+        if isinstance(message, list):
             # If 'message' is a list, return it as is
-            return {"message": data["message"]}
+            return {"message": message}
         else:
-            # If 'message' is a string, wrap it in a list
-            return {"message": [data["message"]]}
+            # If 'message' is a string, return it as a single string
+            return {"message": message}

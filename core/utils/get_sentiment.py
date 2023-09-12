@@ -6,7 +6,6 @@ def get_sentiment(data, batch_process):
 	# load spacy pipeline
 	nlp = spacy.blank('en')
 	nlp.add_pipe('sentencizer')
-
 	# add the rule-based sentiment model
 	nlp.add_pipe('asent_en_v1')
 	# if we receive just a string
